@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 # ベクトルを用意
 # h:特徴ベクトル, x:入力, y:出力表現
 # N:yの長さ
+
 h = [0.9, 0.2, 0.4]
 x = [0.5, 1.0, 0.7, 0.1]
 N = len(h)+len(x)-1
