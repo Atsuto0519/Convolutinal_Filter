@@ -22,5 +22,6 @@ for i in range(len(h)) :
 y = np.dot(conv_xh, x)
 
 # yをプロット
-plt.plot(range(N), y)
+plt.plot(range(N), y, "o")
+plt.bar(range(N), y, width=0.05)
 plt.show()
