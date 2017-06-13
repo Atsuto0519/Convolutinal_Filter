@@ -7,16 +7,14 @@ import matplotlib.pyplot as plt
 # h:特徴ベクトル, x:入力, y:出力表現
 # N:yの長さ
 #
-# h(n) = { 2 (n=0)}
-#        { 1 (n=|1|)}
+# h(n) = { 1 (-1<n<4)}
 #        { 0 (otherwise)}
 #
-# x(n) = { 2 (n=0)}
-#        {-1 (n=|1|}
+# x(n) = { 1 (-1<n<4}
 #        { 0 (otherwise)}
 
-h = [0, 1, 2, 1, 0]
-x = [0, -1, 2, -1, 0]
+h = [0, 1, 1, 1, 1, 0]
+x = [0, 1, 1, 1, 1, 0]
 N = len(h)+len(x)-1
 y = range(N)
 
@@ -30,6 +28,6 @@ for i in range(len(h)) :
 y = np.dot(conv_xh, x)
 
 # yをプロット
-plt.bar(np.arange(-(N-1)/2, (N+1)/2, 1), y, width=0.05)
-plt.plot(np.arange(-(N-1)/2, (N+1)/2, 1), y, "o")
+plt.bar(np.arange(-(N-1)/2+1.5, (N+1)/2+1.5, 1), y, width=0.05)
+plt.plot(np.arange(-(N-1)/2+1.5, (N+1)/2+1.5, 1), y, "o")
 plt.show()
